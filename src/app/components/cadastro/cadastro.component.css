@@ -1,0 +1,31 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.container {
+    display: flex;
+    width: 70rem;
+    justify-content: center;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #55a6ff38;
+    width: 100%;
+    max-width: 45rem;
+    padding: 1.75rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+

@@ -1,0 +1,53 @@
+<h2 class="col-12 mb-3 pl-0">Cadastrar Produto</h2>
+<form
+  [formGroup]="productForm"
+  action=""
+  class=""
+  action=""
+  (ngSubmit)="onSubmit()"
+>
+  <fieldset>
+    <span class="p-float-label">
+      <input
+        pInputText
+        name="nome"
+        id="nome"
+        type="text"
+        data-tipo="nome"
+        formControlName="nome"
+      />
+      <label htmlFor="nome">Nome</label>
+    </span>
+
+    <span class="p-float-label">
+      <p-inputNumber formControlName="preco" [showButtons]="true" inputId="stacked" mode="currency" currency="BRL" [step]="0.1" [min]="0"></p-inputNumber>
+      <label htmlFor="preco">Preço</label>
+    </span>
+
+    <span class="p-float-label">
+      <p-inputNumber formControlName="quantidade" [showButtons]="true" inputId="stacked" [step]="1" [min]="1"></p-inputNumber>
+      <label htmlFor="quantidade">Quantidade</label>
+    </span>
+
+    <span class="p-float-label">
+        <input
+          pInputText
+          name="descricao"
+          id="descricao"
+          type="text"
+          data-tipo="descricao"
+          formControlName="descricao"
+        />
+        <label htmlFor="descricao">Descriçao</label>
+      </span>
+    
+  </fieldset>
+  <div class="flex justify-content-end">
+      <p-button
+      type="submit"
+      label="Cadastrar Produto"
+      class=""
+      [disabled]="!productForm.valid"
+      ></p-button>
+    </div>
+</form>

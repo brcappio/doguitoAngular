@@ -1,0 +1,134 @@
+<h2 class="col-12 mb-3">Complete seu cadastro</h2>
+<form
+  [formGroup]="registerForm"
+  action=""
+  class="mt-5"
+  action=""
+  (ngSubmit)="onSubmit()"
+>
+  <fieldset>
+    <legend>Informações básicas</legend>
+    <span class="p-float-label">
+      <input
+        pInputText
+        name="nome"
+        id="nome"
+        type="text"
+        data-tipo="nome"
+        formControlName="nome"
+      />
+      <label htmlFor="nome">Nome</label>
+    </span>
+
+    <span class="p-float-label">
+      <input
+        pInputText
+        name="email"
+        id="email"
+        type="email"
+        data-tipo="email"
+        formControlName="email"
+      />
+      <label htmlFor="email">Email</label>
+    </span>
+
+    <!--Arrumar isso aqui-->
+    <span class="p-float-label">
+      <p-password formControlName="senha">
+        <ng-template pTemplate="header">
+          <h6>Escolha uma senha</h6>
+        </ng-template>
+        <ng-template pTemplate="footer">
+          <p-divider></p-divider>
+          <p class="mt-2">Sugestões</p>
+          <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+            <li>Pelo menos uma letra minúscula</li>
+            <li>Pelo menos uma letra maiúscula</li>
+            <li>Pelo menos um número</li>
+            <li>Mínimo de 8 caracteres</li>
+          </ul>
+        </ng-template>
+      </p-password>
+      <label htmlFor="senha">Senha</label>
+    </span>
+  </fieldset>
+
+  <fieldset>
+    <legend>Informações básicas</legend>
+
+    <span>
+      <label for="dataNascimento">Data de nascimento</label>
+      <p-calendar
+        dateFormat="dd/mm/yy"
+        [showIcon]="true"
+        [showTime]="false"
+        formControlName="dataNascimento"
+      ></p-calendar>
+    </span>
+
+    <span class="p-float-label">
+      <p-inputMask
+        name="cpf"
+        id="cpf"
+        type="text"
+        data-tipo="cpf"
+        formControlName="cpf"
+        mask="999.999.999-99"
+      />
+      <label htmlFor="cpf">CPF</label>
+    </span>
+  </fieldset>
+
+  <fieldset>
+    <legend>Endereço</legend>
+
+    <span class="p-float-label flex-row justify-content-start">
+      <p-inputMask
+        name="cep"
+        id="cep"
+        type="text"
+        formControlName="cep"
+        mask="99999-999"
+      />
+      <label htmlFor="cep">CEP</label>
+      <p-button
+        class="icone-pesquisa"
+        (click)="consultaCEP()"
+        icon="pi pi-search"
+      ></p-button>
+    </span>
+
+    <span class="p-float-label">
+      <input
+        pInputText
+        name="logradouro"
+        id="logradouro"
+        type="text"
+        formControlName="logradouro"
+      />
+      <label htmlFor="logradouro">Logradouro</label>
+    </span>
+
+    <span class="p-float-label">
+      <input
+        pInputText
+        name="cidade"
+        id="cidade"
+        type="text"
+        formControlName="cidade"
+      />
+      <label htmlFor="cidade">Cidade</label>
+    </span>
+
+    <span class="p-float-label">
+      <input pInputText name="uf" id="uf" type="text" formControlName="uf" />
+      <label htmlFor="uf">Estado</label>
+    </span>
+  </fieldset>
+
+  <p-button
+    type="submit"
+    label="Cadastrar"
+    [disabled]="!registerForm.valid"
+  ></p-button>
+</form>

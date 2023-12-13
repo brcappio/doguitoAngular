@@ -1,0 +1,79 @@
+{
+  "produtos": [
+    {
+      "nome": "Coleira",
+      "preco": 5,
+      "quantidade": 10,
+      "descricao": "Coleira pra cachorro",
+      "id": 1
+    },
+    {
+      "nome": "Frontline",
+      "preco": 200,
+      "quantidade": 10,
+      "descricao": "Remédio para pulgas e carrapatos",
+      "id": 2
+    }
+  ],
+  "usuarios": [
+    {
+      "nome": "Bruno Cappio",
+      "email": "teste@teste.com",
+      "senha": "Testeteste123",
+      "dataNascimento": "2023-12-28T03:00:00.000Z",
+      "cpf": "999.999.999-99",
+      "cep": "99999-999",
+      "logradouro": "Rua Teste",
+      "cidade": "Cidade Teste",
+      "uf": "SP",
+      "id": 1
+    },
+    {
+      "nome": "Teste Teste",
+      "email": "teste@teste.com",
+      "dataNascimento": "2023-12-28T03:00:00.000Z",
+      "cpf": "999.999.999-99",
+      "cep": "99999-999",
+      "logradouro": "Rua Teste",
+      "cidade": "Cidade Teste",
+      "uf": "SP",
+      "id": 2
+    },
+    {
+      "nome": "Murillo",
+      "email": "murillo@gmail.com",
+      "dataNascimento": "2023-12-12T03:00:00.000Z",
+      "cpf": "999.999.999-99",
+      "cep": "99999-999",
+      "logradouro": "Rua Teste",
+      "cidade": "Teste",
+      "uf": "SP",
+      "id": 3
+    },
+    {
+      "nome": "asd",
+      "email": "teste@teste.com",
+      "dataNascimento": "2023-12-14T03:00:00.000Z",
+      "cpf": "999.999.999-99",
+      "cep": "99999-999",
+      "logradouro": "Avenida João Pessoa",
+      "cidade": "Guaratinguetá",
+      "uf": "SP",
+      "id": 8
+    }
+  ],
+  "pets": [
+    {
+      "id": 1,
+      "nome": "King",
+      "especie": "Cachorro",
+      "idade": 6
+    },
+    {
+      "nome": "Mauí",
+      "especie": "Cachorro",
+      "idade": 20,
+      "id": 2
+    }
+  ]
+}
