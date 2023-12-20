@@ -1,0 +1,46 @@
+<h2 class="col-12 mb-3 pl-0">Lista de Pets</h2>
+<p-table [value]="pets" [tableStyle]="{ 'min-width': '30rem' }">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Espécie</th>
+      <th>Idade</th>
+      <th></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-pet>
+    <tr>
+      <td>{{ pet.id }}</td>
+      <td>{{ pet.nome }}</td>
+      <td>{{ pet.especie }}</td>
+      <td>{{ pet.idade }}</td>
+      <td>
+        <button
+          pButton
+          pRipple
+          icon="pi pi-pencil"
+          (click)="edit(pet.id)"
+          class="p-button-rounded p-button-success mr-2"
+        ></button>
+        <button
+          pButton
+          pRipple
+          icon="pi pi-trash"
+          (click)="delete(pet.id)"
+          class="p-button-rounded p-button-warning"
+        ></button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<p-toast></p-toast>
+<p-confirmDialog
+  [style]="{ width: '50vw' }"
+  acceptLabel="Confirmar"
+  acceptButtonStyleClass="p-button-success"
+  rejectButtonStyleClass="p-button-danger"
+  rejectLabel="Cancelar"
+>
+</p-confirmDialog>

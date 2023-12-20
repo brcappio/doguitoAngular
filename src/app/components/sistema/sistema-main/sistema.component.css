@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 78px);
+  overflow-y: scroll;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px #55a6ff38;
+  min-width: 30vw;
+  max-width: 95vw;
+  padding: 1.75rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}

@@ -60,6 +60,18 @@
       "cidade": "Guaratinguetá",
       "uf": "SP",
       "id": 8
+    },
+    {
+      "nome": "Teste",
+      "email": "teste@teste.com",
+      "senha": "qweasdzXc2",
+      "dataNascimento": "2023-12-14T03:00:00.000Z",
+      "cpf": "222.222.222-22",
+      "cep": "69630-970",
+      "logradouro": "Rua General Canrombert",
+      "cidade": "Benjamin Constant",
+      "uf": "AM",
+      "id": 9
     }
   ],
   "pets": [

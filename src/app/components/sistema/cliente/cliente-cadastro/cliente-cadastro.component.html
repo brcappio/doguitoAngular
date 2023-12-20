@@ -1,0 +1,108 @@
+<h2 class="col-12 mb-3 pl-0">Cadastrar Cliente</h2>
+<form
+  [formGroup]="clientForm"
+  action=""
+  class="flex gap-3"
+  action=""
+  (ngSubmit)="onSubmit()"
+>
+  <fieldset>
+    <legend>Informações Pessoais</legend>
+    <span class="p-float-label">
+      <input
+        pInputText
+        name="nome"
+        id="nome"
+        type="text"
+        formControlName="nome"
+      />
+      <label htmlFor="nome">Nome</label>
+    </span>
+
+    <span class="p-float-label">
+      <input
+        pInputText
+        name="email"
+        id="email"
+        type="email"
+        formControlName="email"
+      />
+      <label htmlFor="email">Email</label>
+    </span>
+
+    <span class="font-light">
+      <p-calendar
+        placeholder="Data de nascimento"
+        [showIcon]="true"
+        formControlName="dataNascimento"
+        [showTime]="false"
+      ></p-calendar>
+    </span>
+
+    <span class="p-float-label">
+      <p-inputMask
+        name="cpf"
+        id="cpf"
+        type="text"
+        formControlName="cpf"
+        mask="999.999.999-99"
+        [style]="{ width: '100%' }"
+      />
+      <label htmlFor="cpf">CPF</label>
+    </span>
+  </fieldset>
+
+  <fieldset>
+    <legend>Endereço</legend>
+
+    <span class="p-float-label flex-row">
+      <p-inputMask
+        name="cep"
+        id="cep"
+        type="text"
+        mask="99999-999"
+        formControlName="cep"
+      />
+      <label htmlFor="cep">CEP</label>
+      <p-button
+        class="icone-pesquisa"
+        (click)="consultaCEP()"
+        icon="pi pi-search"
+      ></p-button>
+    </span>
+
+    <span class="p-float-label">
+      <input
+        pInputText
+        name="logradouro"
+        id="logradouro"
+        type="text"
+        formControlName="logradouro"
+      />
+      <label htmlFor="logradouro">Logradouro</label>
+    </span>
+
+    <span class="p-float-label">
+      <input
+        pInputText
+        name="cidade"
+        id="cidade"
+        type="text"
+        formControlName="cidade"
+      />
+      <label htmlFor="cidade">Cidade</label>
+    </span>
+
+    <span class="p-float-label">
+      <input pInputText name="uf" id="uf" type="text" formControlName="uf" />
+      <label htmlFor="uf">Estado</label>
+    </span>
+  </fieldset>
+
+  <p-button
+    type="submit"
+    label="Cadastrar"
+    class="ml-2 align-self-center"
+    [disabled]="!clientForm.valid"
+  ></p-button>
+</form>
